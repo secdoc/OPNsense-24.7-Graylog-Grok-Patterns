@@ -10,7 +10,7 @@ If you use Graylog, this repository has updated Grok Patterns for the filterlog 
  - [input_extractor_filterlog.grok](https://github.com/secdoc/OPNsense-24.7-Graylog-Grok-Patterns/blob/main/input_extractor_filterlog.grok)
  - [suricata_grok_pattern.grok](https://github.com/secdoc/OPNsense-24.7-Graylog-Grok-Patterns/blob/main/suricata_grok_pattern.grok)
 
-In addition, the repository includes a Graylog Content Pack for the Suricata Pipeline and the specific Suricata Parse Pipeline Rule.
+In addition, the repository includes a Graylog Content Packs for Dashboards and Suricata Pipeline and the specific Suricata Parse Pipeline Rule.
 
  - [ontent-pack-opnsense247-dashboards.json](https://github.com/secdoc/OPNsense-24.7-Graylog-Grok-Patterns/blob/main/content-pack-opnsense247-dashboards.json)
  - [content-pack-opnsense247-suricata-pipeline.json](https://github.com/secdoc/OPNsense-24.7-Graylog-Grok-Patterns/blob/main/content-pack-opnsense247-suricata-pipeline.json)
