@@ -1,0 +1,41 @@
+{
+  "v": 1,
+  "id": "a9899de6-1336-4ade-bf60-441dfe347866",
+  "rev": 1,
+  "name": "OPNsense 24.7 Suricata Pipeline",
+  "summary": "OPNsense 24.7 Suricata Pipeline",
+  "description": "Pipeline and Rule to parse OPNsense 24.7 Suricata log output update",
+  "vendor": "secdoc",
+  "url": "https://github.com/secdoc/OPNsense-24.7-Graylog-Grok-Patterns",
+  "parameters": [],
+  "entities": [
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "55e7f091-d485-41f3-b637-f3ad7e26e549",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "parse_suricata_logs"
+        },
+        "description": {
+          "@type": "string",
+          "@value": "suricata"
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"parse_suricata_logs\"\nwhen\n    has_field(\"message\")\nthen\n    let message = to_string($message.message);\n    // Regular expressions for different log parts\n    let regex_timestamp = \"^<\\\\d+>\\\\d (\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\\\\+\\\\d{2}:\\\\d{2})\";\n    let regex_host_process = \"(\\\\S+) suricata (\\\\d+) - \\\\[meta sequenceId=\\\"(\\\\d+)\\\"\\\\]\";\n    let regex_suricata_rule = \"\\\\[(\\\\d+:\\\\d+:\\\\d+)\\\\] (.*?) \\\\[Classification: (.*?)\\\\] \\\\[Priority: (\\\\d+)\\\\]\";\n    let regex_protocol_traffic = \"\\\\{([^}]+)\\\\} (\\\\d+\\\\.\\\\d+\\\\.\\\\d+\\\\.\\\\d+):(\\\\d+) -> (\\\\d+\\\\.\\\\d+\\\\.\\\\d+\\\\.\\\\d+):(\\\\d+)$\";\n\n    // Extracting fields using regex\n    let timestamp = regex(regex_timestamp, message);\n    let host_process = regex(regex_host_process, message);\n    let suricata_rule = regex(regex_suricata_rule, message);\n    let protocol_traffic = regex(regex_protocol_traffic, message);\n\n    // Setting the fields if regex matches\n    set_field(\"timestamp\", timestamp[\"1\"]);\n    set_field(\"host\", host_process[\"1\"]);\n    set_field(\"process_id\", to_long(host_process[\"2\"]));\n    set_field(\"sequence_id\", to_long(host_process[\"3\"]));\n    set_field(\"suricata_rule_id\", suricata_rule[\"1\"]);\n    set_field(\"rule_description\", suricata_rule[\"2\"]);\n    set_field(\"classification\", suricata_rule[\"3\"]);\n    set_field(\"priority\", to_long(suricata_rule[\"4\"]));\n    set_field(\"protocol\", protocol_traffic[\"1\"]);\n    set_field(\"src_ip\", protocol_traffic[\"2\"]);\n    set_field(\"src_port\", to_long(protocol_traffic[\"3\"]));\n    set_field(\"dst_ip\", protocol_traffic[\"4\"]);\n    set_field(\"dst_port\", to_long(protocol_traffic[\"5\"]));\n    \nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=6.0.4+9759bc7"
+        }
+      ]
+    }
+  ]
+}
