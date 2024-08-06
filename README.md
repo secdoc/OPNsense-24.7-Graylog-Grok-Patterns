@@ -47,3 +47,7 @@ New suricata log -
 ```
 ## Explanation
 As you can see when looking at the old and new log format, there has been adjustment to the date formatting, old `Jul 26 13:17:32` and new format `2024-08-05T23:17:15+00:00`, as well as, the inclusion of the `meta sequenceId=` field.
+## Key Changes:
+ - Date Format: The old format used a more condensed representation (e.g., "Jul 26 13:17:32"), while the new format adopts the ISO 8601 standard (e.g., "2024-08-05T23:17:15+00:00"), including timezone information.
+ - Meta Sequence ID: The new format introduces a [meta sequenceId="XXXXXXX"] field, which can be useful for tracking log sequence and detecting missing logs.
+ - Structure: The overall structure of the log entries has been modified to align with more standardized logging practices, potentially improving compatibility with log analysis tools.
