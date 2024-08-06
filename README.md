@@ -45,4 +45,4 @@ New suricata log -
 <173>1 2024-08-05T23:17:15+00:00 xxxx.acme.tech suricata 23296 - [meta sequenceId="1335381"] [1:2024364:4] ET SCAN Possible Nmap User-Agent Observed [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.2.141:56840 -> 192.168.88.2:80
 ```
 ## Explanation
-As you can see when looking at the old `Jul 26 13:17:32` and new log format `2024-08-05T23:17:15+00:00`, there has been adjustment to the date formatting as well as the inclusion of the `meta sequenceId=` field.
+As you can see when looking at the old and new log format, there has been adjustment to the date formatting, old `Jul 26 13:17:32` and new format `2024-08-05T23:17:15+00:00`, as well as, the inclusion of the `meta sequenceId=` field.
