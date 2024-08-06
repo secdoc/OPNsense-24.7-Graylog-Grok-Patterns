@@ -2161,7 +2161,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(protocol:\"99.137.185.156\")"
+                    "query_string": "!(protocol:\"10.13.37.1\")"
                   },
                   "name": "chart",
                   "timerange": {
@@ -3014,7 +3014,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "trend",
                   "timerange": {
@@ -3052,7 +3052,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "chart",
                   "timerange": {
@@ -3086,7 +3086,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "chart",
                   "timerange": {
@@ -3120,7 +3120,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": null,
                   "timerange": {
@@ -3141,7 +3141,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": null,
                   "timerange": {
@@ -3162,7 +3162,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "trend",
                   "timerange": {
@@ -3198,7 +3198,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": null,
                   "timerange": {
@@ -3219,7 +3219,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "chart",
                   "timerange": {
@@ -3255,7 +3255,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "chart",
                   "timerange": {
@@ -3291,7 +3291,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "trend",
                   "timerange": {
@@ -3329,7 +3329,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "chart",
                   "timerange": {
@@ -3363,7 +3363,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                    "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                   },
                   "name": "chart",
                   "timerange": {
@@ -3500,7 +3500,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!=(dst:\"99.137.185.156\")"
+                    "query_string": "!=(dst:\"10.13.37.1\")"
                   },
                   "name": "chart",
                   "timerange": {
@@ -3541,7 +3541,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!=(dst:\"99.137.185.156\")"
+                    "query_string": "!=(dst:\"10.13.37.1\")"
                   },
                   "name": "chart",
                   "timerange": {
@@ -3612,7 +3612,7 @@
                 {
                   "query": {
                     "type": "elasticsearch",
-                    "query_string": "!=(dst:\"99.137.185.156\")"
+                    "query_string": "!=(dst:\"10.13.37.1\")"
                   },
                   "name": "chart",
                   "timerange": {
@@ -4975,7 +4975,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!=(dst:\"99.137.185.156\")"
+                  "query_string": "!=(dst:\"10.13.37.1\")"
                 },
                 "streams": [
                   "aded7d25-0951-4551-b28e-b92e9b9c4a8c"
@@ -5026,7 +5026,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!=(dst:\"99.137.185.156\")"
+                  "query_string": "!=(dst:\"10.13.37.1\")"
                 },
                 "streams": [
                   "aded7d25-0951-4551-b28e-b92e9b9c4a8c"
@@ -5076,7 +5076,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!=(dst:\"99.137.185.156\")"
+                  "query_string": "!=(dst:\"10.13.37.1\")"
                 },
                 "streams": [
                   "aded7d25-0951-4551-b28e-b92e9b9c4a8c"
@@ -6308,7 +6308,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(protocol:\"99.137.185.156\")"
+                  "query_string": "!(protocol:\"10.13.37.1\")"
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -6808,7 +6808,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -6854,7 +6854,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -6897,7 +6897,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -6929,7 +6929,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [],
                 "config": {
@@ -6973,7 +6973,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -7016,7 +7016,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -7048,7 +7048,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -7094,7 +7094,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
@@ -7137,7 +7137,7 @@
                 },
                 "query": {
                   "type": "elasticsearch",
-                  "query_string": "!(dst_ip:\"99.137.185.156\" OR src_ip:\"99.137.185.156\") AND action:\"block\""
+                  "query_string": "!(dst_ip:\"10.13.37.1\" OR src_ip:\"10.13.37.1\") AND action:\"block\""
                 },
                 "streams": [
                   "dec332cd-9d50-499b-8c59-54caf5108ab0"
