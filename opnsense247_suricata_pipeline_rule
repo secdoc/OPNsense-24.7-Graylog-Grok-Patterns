@@ -1,0 +1,43 @@
+rule "parse_opnsense247_suricata_logs"
+when
+    has_field("full_message")
+then
+    let parsed = grok("<%{INT:syslog_priority}>%{INT} %{TIMESTAMP_ISO8601:timestamp} %{HOSTNAME:hostname} suricata %{INT:pid} - \\[meta sequenceId=\"%{INT:sequence_id}\"\\] \\[%{INT:signature_id}:%{INT:signature_rev}:%{INT:signature_update}\\] %{DATA:alert_message} \\[Classification: %{DATA:classification}\\] \\[Priority: %{INT:priority}\\] \\{%{WORD:protocol}\\} %{IPV4:src_ip}:%{INT:src_port} -> %{IPV4:dst_ip}:%{INT:dst_port}", to_string($message.full_message), true);
+
+    set_field("syslog_priority", to_long(parsed.syslog_priority));
+    set_field("pid", to_long(parsed.pid));
+    set_field("sequence_id", to_long(parsed.sequence_id));
+    set_field("signature_id", to_long(parsed.signature_id));
+    set_field("signature_rev", to_long(parsed.signature_rev));
+    set_field("signature_update", to_long(parsed.signature_update));
+    set_field("priority", to_long(parsed.priority));
+    set_field("src_port", to_long(parsed.src_port));
+    set_field("dst_port", to_long(parsed.dst_port));
+
+    set_field("timestamp", parsed.timestamp);
+    set_field("hostname", parsed.hostname);
+    set_field("alert_message", parsed.alert_message);
+    set_field("classification", parsed.classification);
+    set_field("protocol", parsed.protocol);
+    set_field("src_ip", parsed.src_ip);
+    set_field("dst_ip", parsed.dst_ip);
+
+    set_field("event_type", "suricata_alert");
+    set_field("device_type", "firewall");
+    set_field("vendor", "OPNsense");
+
+    set_field("summary", 
+        "Suricata Alert: " + 
+        to_string(parsed.alert_message) + 
+        " (" + 
+        to_string(parsed.protocol) + 
+        ") from " + 
+        to_string(parsed.src_ip) + 
+        ":" + 
+        to_string(parsed.src_port) + 
+        " to " + 
+        to_string(parsed.dst_ip) + 
+        ":" + 
+        to_string(parsed.dst_port)
+    );
+end
