@@ -1,6 +1,9 @@
 # OPNsense - 24.7 Graylog Grok Patterns
 Grok Patterns for Graylog to Support OPNsense 24.7
 
+**NOTE**
+**As of Aug 7 2024 Graylog released version 6.0.5 which broke the filterlog Grok Pattern that worked with version 6.0.4. I have updated the associated files to include both 6.0.4 and 6.0.5.
+
 With the update to new version of software or platforms can come some technical adjustments. One such example is with the change from OPNsense to OPNsense 24.7. The new version changes the logging format of the filterlogs and suricata logs.
 
 If you are parsing the logs into Graylog or any other logging or SIEM system, it will be necessary to to update any parsers or regex/grok patterns. In my case, I utilize Graylog, so it was necessary to update the parsing to properly be used with dashboards and other visualizations or search queries.
