@@ -1,0 +1,45 @@
+Graylog Input Extractor version 6.0.4
+
+{
+  "extractors": [
+    {
+      "title": "OPNsense24.7 - Filterlog Grock Extractor",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "full_message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<%{INT:syslog_priority}>%{INT} %{TIMESTAMP_ISO8601:timestamp} %{HOSTNAME:hostname} filterlog %{INT:pid} - \\[meta sequenceId=\"%{INT:sequence_id}\"\\] %{INT:rule_number},%{DATA:sub_rule_number},%{DATA:anchor},%{DATA:tracker},%{DATA:interface},match,%{WORD:action},%{WORD:direction},%{INT:ip_version},%{DATA:tos},%{DATA:ecn},%{INT:ttl},%{INT:id},%{INT:offset},%{DATA:flags},%{INT:protocol_id},%{WORD:protocol},%{INT:length},%{IPV4:src_ip},%{IPV4:dst_ip},%{INT:src_port},%{INT:dst_port}(,%{INT:data_length}(,%{DATA:tcp_flags}(,%{GREEDYDATA:tcp_options})?)?)?",
+        "named_captures_only": true
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "6.0.5"
+}
+
+Graylog Input Extractor version 6.0.5
+
+{
+  "extractors": [
+    {
+      "title": "OPNsense24.7 - Filterlog Grock Extractor",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "full_message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<%{INT:syslog_priority}>%{INT} %{TIMESTAMP_ISO8601:timestamp} %{HOSTNAME:hostname} filterlog %{INT:pid} - \\[meta sequenceId=\"%{INT:sequence_id}\"\\] %{INT:rule_number},%{DATA:sub_rule_number},%{DATA:anchor},%{DATA:tracker},%{DATA:interface},match,%{WORD:action},%{WORD:direction},%{INT:ip_version},%{DATA:tos},%{DATA:ecn},%{INT:ttl},%{INT:id},%{INT:offset},%{DATA:flags},%{INT:protocol_id},%{WORD:protocol},%{INT:length},%{IPV4:src_ip},%{IPV4:dst_ip},%{INT:src_port},%{INT:dst_port}(,%{INT:data_length}(,%{DATA:tcp_flags}(,%{GREEDYDATA:tcp_options})?)?)?",
+        "named_captures_only": true
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "6.0.5"
+}
