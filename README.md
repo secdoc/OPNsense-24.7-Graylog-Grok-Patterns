@@ -54,3 +54,13 @@ As you can see when looking at the old and new log format, there has been adjust
  - Date Format: The old format used a more condensed representation (e.g., "Jul 26 13:17:32"), while the new format adopts the ISO 8601 standard (e.g., "2024-08-05T23:17:15+00:00"), including timezone information.
  - Meta Sequence ID: The new format introduces a [meta sequenceId="XXXXXXX"] field, which can be useful for tracking log sequence and detecting missing logs.
  - Structure: The overall structure of the log entries has been modified to align with more standardized logging practices, potentially improving compatibility with log analysis tools.
+
+
+## License
+
+Dual-licensed, **attribution required** under both:
+
+- **Code & configuration** (scripts, rules, decoders, pipelines, configs): [Apache License 2.0](LICENSE)
+- **Docs, guides & diagrams** (README, docs, diagrams): [CC BY 4.0](LICENSE-docs)
+
+See [`LICENSING.md`](LICENSING.md) and [`NOTICE`](NOTICE). Credit: Lester E. Nichols III, secdoc.tech.
